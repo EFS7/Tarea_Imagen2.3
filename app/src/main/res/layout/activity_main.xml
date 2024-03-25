@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FotoNueva">
+
+    <ImageView
+        android:id="@+id/foto_imgV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/add_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="+"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/foto_imgV"
+        app:layout_constraintStart_toStartOf="@+id/foto_imgV"
+        app:layout_constraintTop_toBottomOf="@+id/foto_imgV" />
+
+    <EditText
+        android:id="@+id/descripcion_txt"
+        android:layout_width="282dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/add_foto"
+        app:layout_constraintStart_toStartOf="@+id/add_foto"
+        app:layout_constraintTop_toBottomOf="@+id/add_foto" />
+
+    <Button
+        android:id="@+id/guardar_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="@+id/descripcion_txt"
+        app:layout_constraintStart_toStartOf="@+id/descripcion_txt"
+        app:layout_constraintTop_toBottomOf="@+id/descripcion_txt" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        app:layout_constraintBottom_toTopOf="@+id/descripcion_txt"
+        app:layout_constraintStart_toStartOf="@+id/descripcion_txt" />
+
+    <Button
+        android:id="@+id/lista_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Fotos Registradas"
+        app:layout_constraintEnd_toEndOf="@+id/guardar_btn"
+        app:layout_constraintStart_toStartOf="@+id/guardar_btn"
+        app:layout_constraintTop_toBottomOf="@+id/guardar_btn" />
+
+    <Button
+        android:id="@+id/drop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Borrar Datos"
+        app:layout_constraintEnd_toEndOf="@+id/lista_btn"
+        app:layout_constraintStart_toStartOf="@+id/lista_btn"
+        app:layout_constraintTop_toBottomOf="@+id/lista_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
